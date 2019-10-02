@@ -143,3 +143,15 @@
   }
 
 }
+
+@media only screen and (max-width: 600px) {
+  .Details {
+    width: 100%;
+  }
+
+  .Details .CardForecast .now { flex-direction: column; }
+  .Details .CardForecast .ListItem .icon { display: none; }
+  .Details .CardForecast .ListItem .day { flex: 2; }
+  .Details .CardForecast .ListItem .min-max { text-align: right; }
+
+}

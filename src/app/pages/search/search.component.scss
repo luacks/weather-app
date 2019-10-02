@@ -2,6 +2,7 @@
 .card-list {
   width: 630px;
   margin: 0 auto;
+  margin-top: -70px;
 
   .card-content {
     display: flex;
@@ -70,5 +71,14 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card-list {
+    width: 97%;
+
+    .icon { display: none; }
+    .temperature { font-size: 26px; flex: 1; }
   }
 }
