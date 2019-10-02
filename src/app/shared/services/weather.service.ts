@@ -12,20 +12,22 @@ export class WeatherService {
   loading = false;
   search: string = '';
 
+  APPID = '';
+
   constructor(http: HttpClient) { 
     this.http = http;
   }
 
   find(query){
     this.loading = true;
-    return this.http.get(`https://api.openweathermap.org/data/2.5/find?q=${query}&APPID=76d1b43ba3695cfae59aa9f7dc9b4877&units=metric`)
+    return this.http.get(`https://api.openweathermap.org/data/2.5/find?q=${query}&APPID=${this.APPID}&units=metric`)
                   .pipe(
                     map(this.extractData));
   }
 
   getForecast( locationId ){
     this.loading = true;
-    return this.http.get(`https://api.openweathermap.org/data/2.5/forecast?id=${ locationId }&APPID=76d1b43ba3695cfae59aa9f7dc9b4877&units=metric`)
+    return this.http.get(`https://api.openweathermap.org/data/2.5/forecast?id=${ locationId }&APPID=${this.APPID}&units=metric`)
         .pipe(
           map(this.extractData)
         );
@@ -33,7 +35,7 @@ export class WeatherService {
 
   getWeather( locationId ){
     this.loading = true;
-    return this.http.get(`https://api.openweathermap.org/data/2.5/weather?id=${ locationId }&APPID=76d1b43ba3695cfae59aa9f7dc9b4877&units=metric`)
+    return this.http.get(`https://api.openweathermap.org/data/2.5/weather?id=${ locationId }&APPID=${this.APPID}&units=metric`)
       .pipe(
         map(this.extractData)
       );
