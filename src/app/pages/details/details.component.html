@@ -1,0 +1,73 @@
+<div class="Details">
+  <div class="title" *ngIf="!weatherService.loading">
+    <span >Weather in {{ weather.name }}, {{ weather.sys.country }}</span><br />
+    12:57 Aug 2
+  </div>
+
+  <card>
+    <div class="CardForecast" *ngIf="!weatherService.loading">
+
+      <div class="now">
+        <div class="now-temp">
+          <div> {{ weather.main.temp | number:'2.0-0' }}°C</div>
+          <div> 
+            <img src="" />
+          </div>
+        </div>      
+        <div class="now-temp-line">
+          <div class="row">
+            <div style="color: #b30000;">Max</div> 
+            <div>{{ weather.main.temp_max | number:'2.0-0' }}°C</div>
+          </div>
+          <div class="row">
+            <div style="color: #4a90e2;">Min</div> 
+            <div>{{ weather.main.temp_min | number:'2.0-0' }}°C</div>
+          </div>
+          <div class="row">
+            <div>Sunrise</div> 
+            <div>23C</div>
+          </div>
+          <div class="row">
+            <div>Sunset</div> 
+            <div>23C</div>
+          </div>
+        </div>    
+      </div>
+      <h3>5 day weather forecast <small>every 3 hours</small></h3>
+
+      <div class="ListItem" *ngFor="let forecast of forecastList | slice:0:5;">
+        <div class="day">
+          Thu 2 Aug <br>
+          <small>6:00</small>
+        </div>
+
+        <div class="icon">
+
+        </div>
+
+        <div class="min-max">
+          <span style="color: #b30000;">{{ forecast.main.temp_max | number:'2.0-0' }}°C</span>&nbsp;&nbsp;
+          <span style="color: #4a90e2">{{ forecast.main.temp_min | number:'2.0-0' }}°C</span>
+        </div>
+      </div>
+      <div class="ListItem">
+          <div class="day">
+            Thu 2 Aug <br>
+            <small>6:00</small>
+          </div>
+  
+          <div class="icon">
+  
+          </div>
+  
+          <div class="min-max">
+            <span style="color: #b30000;">30C</span>&nbsp;&nbsp;
+            <span style="color: #4a90e2">20C</span>
+          </div>
+        </div>
+    </div>
+    
+
+     
+  </card>
+</div>

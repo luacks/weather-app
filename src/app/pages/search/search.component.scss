@@ -1,0 +1,68 @@
+
+.card-list {
+  width: 630px;
+  margin: 0 auto;
+
+  .card-content {
+    display: flex;
+    height: 170px;
+    box-sizing: border-box;
+    padding: 15px;
+  }
+
+  .temperature {
+    flex: 2.4;
+    display: flex;
+    border-radius: 4px;
+    border: solid 1px #f0f0f0;
+    background-color: #f0f0f0;
+    opacity: 0.75;
+    font-family: Roboto;
+    font-size: 48px;
+    justify-content: center;
+    align-items: center;
+    color: #3c3c3c;
+    font-weight: bold;
+  }
+
+  .min-max {
+    flex: 2.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    .city-name {
+      font-family: Roboto;
+      font-size: 24px;
+      font-weight: bold;
+      color: #39a3db;
+    }
+
+    .temp {
+      font-size: 14px;
+      text-align: left;
+      margin-top: 10px;
+
+      span {
+        font-family: Roboto;
+        font-size: 16px;
+        color: hsla(0, 0%, 24%, 0.643);
+        font-weight: bold;
+        
+        &:first-child {
+          color: #b30000
+        }
+
+        &:last-child {
+          color: #4a90e2;
+        }
+      }
+    }
+    
+  }
+
+  .icon {
+    flex: 2;
+  }
+}

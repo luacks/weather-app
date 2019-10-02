@@ -1,0 +1,20 @@
+header { 
+  background-color: #39a3db;
+  height: 300px;
+  
+  .search-input {
+    width: 460px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 80px;
+    // overflow: hidden;
+
+    h3 { 
+      text-transform: uppercase;
+      color: white;
+      font-weight: 400;
+      font-size: 20px;
+    }
+
+  }
+}

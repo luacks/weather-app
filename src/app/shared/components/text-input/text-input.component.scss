@@ -1,0 +1,28 @@
+.TextInput {
+  border-radius: 4px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  height: 48px;
+  display: flex;
+
+  input {
+    flex: 1;
+    border: none;
+    border-radius: 4px;
+    padding-left: 10px;
+    outline: none;
+  }
+
+  button {
+    background: transparent;
+    border: none;
+    padding-right: 15px;
+    outline: none;
+    
+    .ion-md-search {
+      font-size: 24px;
+      color: #39a3db;
+      
+    }
+  }
+}

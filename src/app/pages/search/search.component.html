@@ -1,0 +1,17 @@
+<div class="card-list">
+  <card *ngFor="let card of weatherService.cities" (click)="navigateDetails(card.id)">
+    <div class="card-content">
+      <div class="temperature">{{ card.main.temp | number:'2.0-0' }}°C</div>
+      <div class="min-max">
+        <div class="city-name">{{ card.name }}, {{ card.sys.country }} <img src="http://openweathermap.org/images/flags/{{ card.sys.country | lowercase }}.png" /></div>
+        <div class="temp">
+          Min &nbsp;&nbsp;<span>{{ card.main.temp_min | number:'2.0-0' }}°C</span> <br />
+          Max &nbsp;&nbsp;<span>{{ card.main.temp_max | number:'2.0-0' }}°C</span>
+        </div>
+      </div>
+      <div class="icon">
+        <img src="https://openweathermap.org/img/w/{{ card.weather[0].icon }}.png" />
+      </div>
+    </div>
+  </card>
+</div>
