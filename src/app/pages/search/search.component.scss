@@ -8,6 +8,7 @@
     height: 170px;
     box-sizing: border-box;
     padding: 15px;
+    cursor: pointer;
   }
 
   .temperature {
@@ -43,6 +44,7 @@
       font-size: 14px;
       text-align: left;
       margin-top: 10px;
+      line-height: 160%;
 
       span {
         font-family: Roboto;
@@ -64,5 +66,9 @@
 
   .icon {
     flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 }

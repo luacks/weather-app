@@ -1,6 +1,9 @@
-<header>
+<header #root>
+  <div *ngIf="goback" class="Back" (click)="back()">
+      <i class="icon ion-md-arrow-back"></i>
+  </div>
   <div class="search-input">
-    <h3>Weather in Your City</h3>
-    <text-input (onSearch)="search($event)"></text-input>
+    <h3 *ngIf="!goback">Weather in Your City</h3>
+    <text-input (onSearch)="search($event)" [searchValue]="weatherService.search"></text-input>
   </div>
 </header>

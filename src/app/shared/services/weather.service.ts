@@ -10,6 +10,7 @@ export class WeatherService {
   http: HttpClient;
   cities = [];
   loading = false;
+  search: string = '';
 
   constructor(http: HttpClient) { 
     this.http = http;

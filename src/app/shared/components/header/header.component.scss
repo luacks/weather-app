@@ -1,20 +1,33 @@
 header { 
   background-color: #39a3db;
   height: 300px;
-  
+  transition: all 0.3s ease-in-out;
+
   .search-input {
     width: 460px;
     margin: 0 auto;
     text-align: center;
-    padding-top: 80px;
+    padding-top: 30px;
     // overflow: hidden;
 
     h3 { 
+      padding-top: 50px;
       text-transform: uppercase;
       color: white;
       font-weight: 400;
       font-size: 20px;
     }
 
+  }
+
+  .Back {
+    position: absolute;
+    left: 20px;
+    cursor: pointer;
+    top: 20px;
+    .ion-md-arrow-back {
+      color: white;
+      font-size: 24px;
+    }
   }
 }

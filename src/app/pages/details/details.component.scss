@@ -59,6 +59,13 @@
             color: #3c3c3c;
           }
 
+          &:last-child {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+          }
+
           flex: 1;
 
         }
@@ -94,12 +101,18 @@
     }
 
     .ListItem {
+      
       display: flex;
       height: 100px;
       border-bottom: 1px solid #f0f0f0;
       align-items: center;
-      
       padding: 0px 30px;
+      transition: background-color 0.2s ease-in-out;
+
+      &:hover {
+        background-color: #f0f0f0;
+        border-left: 8px solid #39a3db;
+      }
 
       .day {
         flex: 1;
@@ -114,6 +127,8 @@
       }
 
       .icon {
+        display: flex;
+        align-items: center;
         flex: 1.4;
       }
 
@@ -125,10 +140,6 @@
       }
     }
 
-    .active {
-      background-color: #f0f0f0;
-      border-left: 8px solid #39a3db;
-    }
   }
 
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
 
 @Component({
   selector: 'text-input',
@@ -7,8 +7,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 })
 export class TextInputComponent implements OnInit {
 
-  searchValue: string = '';
-
+  @Input() searchValue = '';
   @Output() onSearch = new EventEmitter();
 
   constructor() { }
